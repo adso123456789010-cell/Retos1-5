@@ -1,0 +1,13 @@
+<section class="traffic-light">
+  <h1>Reto4</h1>
+  <h1>Semáforo interactivo</h1>
+
+  <div class="light" [style.backgroundColor]="color" aria-label="Luz del semáforo"></div>
+  <p class="message" aria-live="polite">{{ message }}</p>
+
+  <div class="buttons">
+    <button type="button" (click)="setLight('red')">Rojo</button>
+    <button type="button" (click)="setLight('yellow')">Amarillo</button>
+    <button type="button" (click)="setLight('green')">Verde</button>
+  </div>
+</section>

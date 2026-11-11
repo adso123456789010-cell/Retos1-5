@@ -1,0 +1,38 @@
+<section class="inventory">
+  <h1>Reto 5</h1>
+  <h1>Inventario</h1>
+
+  <form (ngSubmit)="addProduct()">
+    <label>
+      Producto
+      <input name="name" [(ngModel)]="name" placeholder="Nombre del producto" />
+    </label>
+
+    <label>
+      Cantidad
+      <input name="quantity" type="number" min="0" [(ngModel)]="quantity" />
+    </label>
+
+    <label>
+      Precio
+      <input name="price" type="number" min="0" step="any" [(ngModel)]="price" />
+    </label>
+
+    <button type="submit">Agregar producto</button>
+  </form>
+
+  @if (message) {
+    <p class="message" role="alert">{{ message }}</p>
+  }
+
+  <h2>Productos registrados</h2>
+  @for (product of products; track $index; let i = $index) {
+    <div class="product">
+      <span>{{ product.name }} — Cantidad: {{ product.quantity }} — Precio: ${{ product.price }}
+        — Total: ${{ product.quantity * product.price }}</span>
+      <button class="remove" type="button" (click)="removeProduct(i)">Eliminar</button>
+    </div>
+  } @empty {
+    <p>No hay productos en el inventario.</p>
+  }
+</section>

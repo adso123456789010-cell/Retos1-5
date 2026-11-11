@@ -1,0 +1,38 @@
+.traffic-light {
+  max-width: 400px;
+  margin: 24px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.light {
+  width: 90px;
+  height: 90px;
+  margin: 20px auto 10px;
+  border: 2px solid #555;
+  border-radius: 50%;
+}
+
+.message {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}

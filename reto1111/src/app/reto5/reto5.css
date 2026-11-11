@@ -1,0 +1,70 @@
+.inventory {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #24233b;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+}
+
+input,
+button {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font: inherit;
+}
+
+form button {
+  border: 0;
+  background: #6c5ce7;
+  color: white;
+  cursor: pointer;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.remove {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.message {
+  color: #b54755;
+}
+
+@media (max-width: 520px) {
+  .inventory {
+    margin: 16px;
+    padding: 18px;
+  }
+
+  .product {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

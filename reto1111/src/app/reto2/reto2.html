@@ -1,0 +1,24 @@
+<main class="page">
+  <section class="catalog">
+  <h1>Reto 2</h1>
+    <h1 class="mi-description">Catálogo de productos</h1>
+    <p class="description">Conoce nuestros productos y sus precios.</p>
+
+    <div class="product-list">
+      @for (product of products; track product.name) {
+        <article class="product">
+          <div>
+            <h2>{{ product.name }}</h2>
+            <p class="category">{{ product.category }}</p>
+          </div>
+          <div class="price-info">
+            <p class="price">$ {{ product.price }}</p>
+            @if (product.price > 100000) {
+              <span class="expensive">Producto costoso</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</main>

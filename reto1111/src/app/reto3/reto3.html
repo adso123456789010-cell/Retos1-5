@@ -1,0 +1,39 @@
+
+<main class="page">
+  <section class="students">
+    <h1>Reto 3</h1>
+    <h1>Registro de estudiantes</h1>
+
+    <form (ngSubmit)="register()">
+      <label>
+        Nombre
+        <input name="name" [(ngModel)]="name" />
+      </label>
+
+      <label>
+        Programa
+        <input name="program" [(ngModel)]="program" />
+      </label>
+
+      <label>
+        Edad
+        <input name="age" type="number" min="1" [(ngModel)]="age" />
+      </label>
+
+      <button type="submit">Registrar</button>
+    </form>
+
+    @if (message) {
+      <p class="message" role="alert">{{ message }}</p>
+    }
+
+    <h2>Estudiantes registrados</h2>
+    <ul>
+      @for (student of students; track student.name + student.age) {
+        <li>{{ student.name }} — {{ student.program }}, {{ student.age }} años</li>
+      } @empty {
+        <li>Aún no hay estudiantes registrados.</li>
+      }
+    </ul>
+  </section>
+</main>

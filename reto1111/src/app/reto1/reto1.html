@@ -1,0 +1,51 @@
+  <main class="page">
+  <section class="calculator" aria-labelledby="calculator-title">
+    <header class="intro">
+      <h1>Reto 1</h1>
+      <h1 id="titulo-calcu">Calculadora basica</h1>
+      <p class="description">Calculadora reto 1 suma y resta</p>
+    </header>
+
+      <div class="fields">
+        <label class="number-field">
+          <input
+            type="number"
+            name="Numeros"
+            [(ngModel)]="firstNumber"
+            placeholder="Ej. 24........"
+          />
+        </label>
+
+        <label class="numero-field">
+          <input
+            type="number"
+            name="secondNumber"
+            [(ngModel)]="secondNumber"
+            placeholder="Ej. 8"
+          />
+        </label>
+      </div>
+
+      <div class="acciones">
+        <button class="boton1" type="button" (click)="add()">
+          <span class="button-1" aria-hidden="true">＋</span>
+          Sumar
+        </button>
+        <button class="boton2" type="button" (click)="subtract()">
+          <span class="buton-2" aria-hidden="true">−</span>
+          Restar
+        </button>
+      </div>
+
+      <div class="resultado" >
+        @if (message) {
+          <p class="validarmensaje" role="alert">{{ message }}</p>
+        } @else if (result !== null) {
+          <p class="resultado-label">RESULTADO</p>
+          <p class="resultadpo-value">{{ result }}</p>
+        } @else {
+          <p class="resultado">Mira tu respuesta</p>
+        }
+      </div>
+  </section>
+</main>
